@@ -2,7 +2,7 @@ import React from "react";
 import "./ProductCard.css";
 
 function ProductCard({ pro, cartItem, cartItems, setCartItems, contaty }) {
-    
+
   function updateCartProducts() {
     const dupProducts = [...cartItems];
 
@@ -19,9 +19,6 @@ function ProductCard({ pro, cartItem, cartItems, setCartItems, contaty }) {
       dupProducts.push(pro);
       setCartItems(dupProducts);
     }
-
-
-    console.log(cartItems)
   }
 
   function removeItemFromCart() {
@@ -31,15 +28,17 @@ function ProductCard({ pro, cartItem, cartItems, setCartItems, contaty }) {
 
     if (products.length == 0) return;
 
+    let newProducts
+
     dupProducts.map((product) => {
       if (product.id === pro.id) {
         if (product.contaty == 0) {
-          dupProducts.filter((product) => product.id !== pro.id);
+          newProducts = dupProducts.filter((product) => product.id !== pro.id);
         } else {
           product.contaty -= 1;
         }
       }
-      setCartItems(dupProducts);
+      setCartItems(newProducts);
     });
 
     console.log(cartItems)

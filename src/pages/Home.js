@@ -39,7 +39,7 @@ function Home({ cartItems, setCartItems }) {
       <div className="main-header">
         <h1 className="header">Home</h1>
         <span className="cart-icon" onClick={() => navigate("/cart")}>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i className="fa-solid fa-cart-shopping"></i>
           <span className="cart-items">{cartItems.length}</span>
         </span>
       </div>
