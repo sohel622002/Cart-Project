@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import { useState } from "react";
 
 function App() {
+
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 5000,
+      name: "Redmi Note 12 Pro",
+      price: 5000,
+      imageSrc:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqYByvy-Wlu2DxToLahxc3Sf13dGeERPvx4Uae7befWA&s",
+      contaty: 0,
+    },
+  ]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home cartItems={cartItems} setCartItems={setCartItems} />}
+        />
+        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+      </Routes>
     </div>
   );
 }

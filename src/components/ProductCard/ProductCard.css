@@ -1,0 +1,29 @@
+.product-card{
+    padding: 20px 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+    display: flex;
+    gap: 20px;
+}
+
+.product-card > img{
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.product-detail-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.product-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-btns > button{
+    padding: 7px;
+}

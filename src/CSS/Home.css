@@ -1,0 +1,40 @@
+.header{
+    text-align: center;
+}
+
+.main-header{
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prodducts{
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cart-icon{
+    font-size: 28px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items{
+    font-size: 16px;
+    display: inline-flex;
+    width: 30px;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    color: white;
+}
